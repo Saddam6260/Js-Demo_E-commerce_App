@@ -3,6 +3,9 @@
 /**** Variables ****/
 :root {
   --white: #fff;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1440px;
 }
 
 /*** Common Style ***/
@@ -17,6 +20,7 @@ body {
 button {
   background: none;
   border: none;
+  outline: none;
 }
 ul {
   list-style: none;
@@ -24,23 +28,115 @@ ul {
 a{
     text-decoration: none;
 }
+img{
+  width: 100%;
+}
 
 /**** Common Class ****/
 .container {
   width: 100%;
-  max-width: 97%;
+  max-width: 91%;
   margin: auto;
 }
 .btn{
     width: 100%;
     padding: 16px 0px;
     background-color: white;
+}
+.btn a{
+    font-size: 14px;
+    font-weight: 700;
     color: black;
+    letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: var(--lg)) {
   .btn{
     padding: 16px 28px;
     width: initial;
   }
+}
+
+/*
+=========
+Header
+=========
+*/
+header{
+    position: relative;
+    background-color: white;
+    padding: 10px 0px;
+}
+header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Right */
+header .header-right {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.header-right .about-contact{
+  display: none;
+}
+.header-right .price {
+  font-size: 14px;
+  font-weight: 600;
+}
+.cart-details svg{ 
+  width: 15px;
+  height: 15px;
+}
+.cart-details{
+  position: relative;
+}
+.cart-details::after{
+  content: '0';
+  width: 15px;
+  height: 15px;
+  top: -7px;
+  right: -11px;
+  color: white;
+  font-size: 8px;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+}
+.header-right .showber{
+  background-color: black;
+  color: white;
+  padding: 7px 10px;
+}
+
+/* Header Left */
+.header-left .menu-item{
+  display: none;
+}
+.header-left .logo-wrap .logo{
+  max-width: 95px;
+}
+.header-left .logo-wrap .white-logo{
+  display: none;
+}
+
+@media only screen and (min-width: var(--lg)) {
+  header .header-left .logo{
+    max-width: 140px;
+  }
+}
+/* 
+=========
+Main
+=========
+*/
+main{
+    background-image: url(./images/background/main-background-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
