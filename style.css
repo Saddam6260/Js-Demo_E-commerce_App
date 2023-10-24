@@ -1,5 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+/**** Variables ****/
+:root {
+  --white: #fff;
+}
+
+/*** Common Style ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+button {
+  background: none;
+  border: none;
+}
+ul {
+  list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/**** Common Class ****/
+.container {
+  width: 100%;
+  max-width: 97%;
+  margin: auto;
+}
+.btn{
+    width: 100%;
+    padding: 16px 0px;
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (min-width: 992px) {
+  .btn{
+    padding: 16px 28px;
+    width: initial;
+  }
 }
