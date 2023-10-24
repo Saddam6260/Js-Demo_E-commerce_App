@@ -25,6 +25,11 @@ button {
 ul {
   list-style: none;
 }
+li{
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 a{
     text-decoration: none;
 }
@@ -74,7 +79,7 @@ header .container{
 }
 
 /* Header Right */
-header .header-right {
+.header-right {
   display: flex;
   align-items: center;
   column-gap: 15px;
@@ -92,6 +97,7 @@ header .header-right {
 }
 .cart-details{
   position: relative;
+  margin-right: 10px;
 }
 .cart-details::after{
   content: '0';
@@ -107,6 +113,9 @@ header .header-right {
   border-radius: 50%;
   position: absolute;
 }
+.header-right .profile{
+  display: none;
+}
 .header-right .showber{
   background-color: black;
   color: white;
@@ -117,15 +126,71 @@ header .header-right {
 .header-left .menu-item{
   display: none;
 }
-.header-left .logo-wrap .logo{
+.header-left .logo-wrap{
   max-width: 95px;
 }
 .header-left .logo-wrap .white-logo{
   display: none;
 }
 
-@media only screen and (min-width: var(--lg)) {
-  header .header-left .logo{
+
+@media only screen and (min-width: 768px) {
+  header{
+    padding: 20px 0px;
+  }
+  /* Header left */
+  .header-left .logo-wrap{
+    max-width: 110px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header{
+    background-color: #bde0fe;
+    padding: 24px 0px;
+    color: white;
+  }
+  /* Header left */
+  .header-left .logo-wrap{
+    max-width: 120px;
+  }
+  .header-left .logo-wrap .white-logo{
+    display: block;
+  }
+  .header-left .logo-wrap .black-logo{
+    display: none;
+  }
+  .header-left{
+    display: flex;
+    align-items: center;
+  }
+  .header-left .menu-item{
+    display: flex;
+    column-gap: 15px;
+  }
+  /* Header right */
+  .header-right .about-contact{
+    margin-right: 10px;
+    display: flex;
+    column-gap: 15px;
+  }
+  .header-right .showber{
+    display: none;
+  }
+  .header-right .profile{
+    display: block;
+    fill: white;
+  }
+  .header-right .cart-details{
+    fill: white;
+  }
+  .cart-details::after{
+    background-color: white;
+    color: black;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  /* Header left */
+  header .header-left .logo-wrap{
     max-width: 140px;
   }
 }
