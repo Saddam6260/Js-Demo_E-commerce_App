@@ -5,6 +5,8 @@
   --white: #fff;
   --thin-blue: #f5f7f9;
   --thin-gray: #e2e2e2;
+  --gray: #dddddd;
+  --deep-gray: #a1a1a1;
   --md: 768px;
   --lg: 992px;
   --xl: 1440px;
@@ -62,11 +64,18 @@ img {
   line-height: 160%;
   font-weight: 500;
 }
+.common-h5{
+  font-size: 18px;
+  font-weight: 400;
+}
 
 @media only screen and (min-width: 768px) {
   .btn {
     padding: 16px 28px;
     width: initial;
+  }
+  .common-h5{
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -359,6 +368,56 @@ Main
   }
 }
 
+/* 
+================
+Subscribe & List
+================
+*/
+#subscribe-lists{
+  padding: 40px 0px;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+#subscribe-lists .container{
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  row-gap: 50px;
+}
+
+/* logo */
+#subscribe-lists .logo img{
+  width: 90px;
+}
+#subscribe-lists .logo h5{
+  margin-top: 40px;
+  padding: 0px 20px;
+  font-weight: 600;
+}
+/* list */
+#subscribe-lists .lists-wrap{
+  display: flex;
+  flex-flow: column;
+  row-gap: 20px;
+}
+#subscribe-lists .lists-wrap ul{
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+}
+#subscribe-lists .lists-wrap ul h5{
+  margin-bottom: 10px;
+}
+#subscribe-lists .lists-wrap ul li a{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--deep-gray);
+  text-transform: capitalize;
+}
+/* subscribe */
+
+@media only screen and (min-width: 768px) {
+}
 /*
 ========
 Footer
@@ -383,6 +442,7 @@ footer .social-wrap{
   align-items: center;
   justify-content: center;
   column-gap: 30px;
+  flex-flow: row wrap;
 }
 footer .social-wrap li a svg{
   fill: black;
@@ -395,5 +455,9 @@ footer .social-wrap li a svg{
     grid-template-rows: 1fr;
     justify-content: space-between;
     align-items: center;
+  }
+  footer .social-wrap{
+    row-gap: 10px;
+    justify-content: start;
   }
 }
