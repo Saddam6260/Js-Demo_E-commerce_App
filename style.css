@@ -59,12 +59,12 @@ img {
   color: black;
   letter-spacing: 1px;
 }
-.common-pera{
+.common-pera {
   font-size: 15px;
   line-height: 160%;
   font-weight: 500;
 }
-.common-h5{
+.common-h5 {
   font-size: 18px;
   font-weight: 400;
 }
@@ -74,15 +74,15 @@ img {
     padding: 16px 28px;
     width: initial;
   }
-  .common-h5{
+  .common-h5 {
     font-size: 20px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .container{
+  .container {
     max-width: 94%;
   }
-  .common-pera{
+  .common-pera {
     font-size: 16px;
   }
 }
@@ -373,90 +373,149 @@ Main
 Subscribe & List
 ================
 */
-#subscribe-lists{
+#subscribe-lists {
   padding: 40px 0px;
   border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
 }
-#subscribe-lists .container{
-  display: flex;
-  flex-flow: column;
+#subscribe-lists .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
   text-align: center;
   row-gap: 50px;
 }
 
 /* logo */
-#subscribe-lists .logo img{
+#subscribe-lists .logo img {
   width: 90px;
 }
-#subscribe-lists .logo h5{
+#subscribe-lists .logo h5 {
   margin-top: 40px;
   padding: 0px 20px;
   font-weight: 600;
 }
 /* list */
-#subscribe-lists .lists-wrap{
+#subscribe-lists .lists-wrap {
   display: flex;
   flex-flow: column;
   row-gap: 20px;
 }
-#subscribe-lists .lists-wrap ul{
+#subscribe-lists .lists-wrap ul {
   display: flex;
   flex-flow: column;
   row-gap: 10px;
 }
-#subscribe-lists .lists-wrap ul h5{
+#subscribe-lists .lists-wrap ul h5 {
   margin-bottom: 10px;
 }
-#subscribe-lists .lists-wrap ul li a{
+#subscribe-lists .lists-wrap ul li a {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--deep-gray);
   text-transform: capitalize;
 }
 /* subscribe */
-
-@media only screen and (min-width: 768px) {
+.subscribe input {
+  margin: 20px 0px;
+  outline: none;
+  border: 1px solid var(--gray);
+  padding: 8px 0px 8px 8px;
+  width: 100%;
 }
+.subscribe button {
+  background-color: #0084d6;
+  padding: 16px 28px;
+  width: initial;
+  color: white;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 576px) {
+  #subscribe-lists .container {
+    grid-template-columns: repeat(3, auto);
+    text-align: start;
+    justify-content: space-between;
+  }
+  /* logo */
+  #subscribe-lists .logo h5 {
+    padding: 0px 0px;
+  }
+  /* lists */
+  #subscribe-lists .lists-wrap {
+    flex-flow: row;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #subscribe-lists .container {
+    column-gap: 30px;
+  }
+  /* lists */
+  #subscribe-lists .lists-wrap {
+    flex-flow: row;
+    column-gap: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #subscribe-lists .container{
+    grid-template-columns: 30% 30% 25%;
+  }
+  /* lists */
+  #subscribe-lists .lists-wrap {
+    justify-content: space-between;
+  }
+  #subscribe-lists .lists-wrap ul {
+    row-gap: 15px;
+  }
+  #subscribe-lists .lists-wrap ul li a{
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #subscribe-lists .container{
+    grid-template-columns: 30% 25% 25%;
+  }
+}
+
 /*
 ========
 Footer
 ========
 */
-footer{
+footer {
   padding: 20px 0px;
 }
-footer .container{
+footer .container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   row-gap: 30px;
   text-align: center;
 }
-footer .container p{
+footer .container p {
   font-weight: 400;
   font-size: 14px;
 }
-footer .social-wrap{
+footer .social-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 30px;
   flex-flow: row wrap;
 }
-footer .social-wrap li a svg{
+footer .social-wrap li a svg {
   fill: black;
 }
 
 @media only screen and (min-width: 576px) {
-  footer .container{
+  footer .container {
     text-align: start;
     grid-template-columns: 30% 30%;
     grid-template-rows: 1fr;
     justify-content: space-between;
     align-items: center;
   }
-  footer .social-wrap{
+  footer .social-wrap {
     row-gap: 10px;
     justify-content: start;
   }
