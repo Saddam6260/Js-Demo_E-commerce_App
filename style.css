@@ -6,7 +6,7 @@
   --thin-blue: #f5f7f9;
   --thin-gray: #e2e2e2;
   --gray: #dddddd;
-  --deep-gray: #a1a1a1;
+  --deep-gray: #636363;
   --md: 768px;
   --lg: 992px;
   --xl: 1440px;
@@ -182,11 +182,13 @@ header .container {
 
 /* Manuber Show hide */
 .menuber-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   width: 100%;
   height: 100vh;
   background-color: rgb(0, 0, 0, 0.4);
-  position: fixed;
-  z-index: 99;
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.3s ease-in-out;
@@ -218,6 +220,7 @@ header .container {
   border-bottom: 1px solid var(--thin-gray);
   background-color: var(--thin-blue);
 }
+
 @media only screen and (min-width: 768px) {
   header {
     padding: 20px 0px;
@@ -369,6 +372,40 @@ Main
 }
 
 /* 
+========
+Discount
+========
+*/
+#discount {
+  padding: 35px 0px;
+  border-top: 1px solid var(--gray);
+}
+#discount .container {
+  text-align: center;
+}
+#discount a {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  line-height: 160%;
+}
+#discount a:hover {
+  color: #0084d6;
+}
+
+@media only screen and (min-width: 768px) {
+  #discount .container {
+    text-align: start;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #discount a {
+    font-size: 28px;
+  }
+}
+
+/* 
 ================
 Subscribe & List
 ================
@@ -410,8 +447,8 @@ Subscribe & List
   margin-bottom: 10px;
 }
 #subscribe-lists .lists-wrap ul li a {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 300;
   color: var(--deep-gray);
   text-transform: capitalize;
 }
@@ -436,6 +473,7 @@ Subscribe & List
     grid-template-columns: repeat(3, auto);
     text-align: start;
     justify-content: space-between;
+    row-gap: 0px;
   }
   /* logo */
   #subscribe-lists .logo h5 {
@@ -447,6 +485,9 @@ Subscribe & List
   }
 }
 @media only screen and (min-width: 768px) {
+  #subscribe-lists {
+    padding: 50px 0px;
+  }
   #subscribe-lists .container {
     column-gap: 30px;
   }
@@ -457,8 +498,11 @@ Subscribe & List
   }
 }
 @media only screen and (min-width: 992px) {
-  #subscribe-lists .container{
-    grid-template-columns: 30% 30% 25%;
+  #subscribe-lists {
+    padding: 75px 0px 100px 0px;
+  }
+  #subscribe-lists .container {
+    grid-template-columns: 30% 28% 25%;
   }
   /* lists */
   #subscribe-lists .lists-wrap {
@@ -467,13 +511,13 @@ Subscribe & List
   #subscribe-lists .lists-wrap ul {
     row-gap: 15px;
   }
-  #subscribe-lists .lists-wrap ul li a{
+  #subscribe-lists .lists-wrap ul li a {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #subscribe-lists .container{
-    grid-template-columns: 30% 25% 25%;
+  #subscribe-lists .container {
+    grid-template-columns: 30% 25% 30%;
   }
 }
 
