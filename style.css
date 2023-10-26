@@ -66,7 +66,7 @@ img {
 }
 .common-h5 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 768px) {
@@ -371,50 +371,143 @@ Main
 }
 
 /* 
+===============
+Special Edition
+===============
+*/
+
+#special-edition {
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+}
+.special-edition-container {
+  width: 100%;
+  max-width: 1380px;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 132, 214, 0.3841911764705882) 48%,
+      rgba(0, 132, 214, 0.16010154061624648) 100%
+    ),
+    url(./images/background/special-edition-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.special-edition-container h1 {
+  font-size: 25px;
+}
+.special-edition-container p {
+  margin-bottom: 20px;
+  line-height: 160%;
+}
+.special-edition-container button {
+  margin-top: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  #special-edition {
+    padding: 0px 40px;
+  }
+  .special-edition-container {
+    padding: 60px 50px;
+    text-align: start;
+    align-items: start;
+  }
+  .special-edition-container h1 {
+    margin-top: 10px;
+  }
+  .special-edition-container p {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #special-edition {
+    padding: 0px 10px;
+  }
+  .special-edition-container {
+    padding: 60px 50px;
+    text-align: start;
+    justify-content: start;
+    background-attachment: fixed;
+  }
+  .special-edition-container h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .special-edition-container {
+    padding: 100px;
+  }
+}
+
+/* 
 ===========
 Our Service
 ===========
 */
-#our-service{
+#our-service {
   padding: 60px 0px;
   background-color: var(--thin-blue);
 }
-#our-service .container{
+#our-service .container {
   padding: 0px 10px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
   row-gap: 30px;
 }
-.service{
+.service {
   text-align: center;
   display: flex;
   flex-flow: column;
   row-gap: 10px;
   align-items: center;
 }
-.service img{
+.service img {
   width: 18%;
+}
+.service p {
+  line-height: 140%;
 }
 
 @media only screen and (min-width: 768px) {
-  #our-service .container{
+  #our-service .container {
+    padding: 0px 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, auto);
     column-gap: 150px;
     justify-content: space-between;
     row-gap: 30px;
   }
+  .service p {
+    line-height: 160%;
+  }
 }
 @media only screen and (min-width: 992px) {
-  #our-service{
+  #our-service {
     padding: 100px 0px;
   }
-  #our-service .container{
+  #our-service .container {
+    padding: 0px 50px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     column-gap: 50px;
     justify-content: space-between;
+  }
+  .service {
+    row-gap: 20px;
+  }
+  .service p {
+    line-height: 190%;
   }
 }
 
