@@ -372,11 +372,84 @@ Main
 }
 
 /* 
+==============
+Latest Offer
+==============
+*/
+#latest-offer {
+  padding: 40px 0px;
+}
+#latest-offer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
+}
+#latest-offer .container .card {
+  padding: 120px 20px 20px 20px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+#latest-offer .container .card .card-content {
+  color: white;
+}
+#latest-offer .container .card:nth-child(1) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.26934523809523814) 0%,
+      rgba(94, 94, 94, 0.4906337535014006) 10%
+    ),
+    url(./images/women-fashion-free-img.jpg);
+}
+#latest-offer .container .card:nth-child(2) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.26934523809523814) 0%,
+      rgba(94, 94, 94, 0.4906337535014006) 10%
+    ),
+    url(./images/men-fashion-free-img.jpg);
+}
+#latest-offer .container .card:nth-child(3) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.26934523809523814) 0%,
+      rgba(94, 94, 94, 0.4906337535014006) 10%
+    ),
+    url(./images/footwear-free-img.jpg);
+}
+
+#latest-offer .container .card .card-content p {
+  margin: 10px 0px 15px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  #latest-offer .container {
+    padding: 0px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+  }
+  #latest-offer .container .card {
+    padding: 200px 30px 30px 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #latest-offer .container {
+    padding: 0px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+  }
+  #latest-offer .container .card {
+    padding: 300px 40px 40px 40px;
+  }
+}
+/* 
 ===============
 Special Edition
 ===============
 */
-
 #special-edition {
   display: flex;
   justify-content: center;

@@ -18,6 +18,7 @@ let offerCards = [
 ];
 
 // Selector
+const offerContainer = document.querySelector(".offer-container");
 const showBtn = document.querySelector(".showBtn");
 const hideBtn = document.querySelector(".hideBtn");
 const menuber = document.querySelector(".menuber-wrapper");
@@ -25,7 +26,6 @@ const menuber = document.querySelector(".menuber-wrapper");
 // Click Event
 showBtn.addEventListener("click", showMenuber);
 hideBtn.addEventListener("click", hideMenuber);
-
 
 // Windows Start
 window.addEventListener("DOMContentLoaded", displayLatestOffer());
@@ -46,7 +46,16 @@ function hideMenuber() {
 }
 
 function displayLatestOffer() {
-  offerCards.map((card) => {
-    return ``
-  })
+  let displayCards = offerCards.map((card) => {
+    return `<div class="card">
+              <div class="card-content">
+                <h5>${card.header}</h5>
+                <p>${card.description}</p>
+                <button class="btn">SHOP NOW</button>
+              </div>
+            </div>
+            `;
+  });
+  displayCards = displayCards.join("");
+  offerContainer.innerHTML = displayCards;
 }
