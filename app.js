@@ -49,9 +49,9 @@ function displayLatestOffer() {
   let displayCards = offerCards.map((card) => {
     return `<div class="card">
               <div class="card-content">
-                <h5>${card.header}</h5>
-                <p>${card.description}</p>
-                <button class="btn">SHOP NOW</button>
+                <h3 class="common-h3">${card.header}</h5>
+                <p class="common-pera">${card.description}</p>
+                <button class="btn"><a href="">SHOP NOW</a></button>
               </div>
             </div>
             `;

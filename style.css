@@ -14,6 +14,7 @@
 
 /*** Common Style ***/
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -52,17 +53,30 @@ img {
   padding: 16px 0px;
   background-color: white;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 .btn a {
   font-size: 14px;
   font-weight: 700;
   color: black;
   letter-spacing: 1px;
+  transition: all .3s ease-in-out;
+}
+.btn:hover{
+  background-color: black;
+}
+.btn:hover a{
+  color: white;
 }
 .common-pera {
   font-size: 15px;
-  line-height: 160%;
+  line-height: 180%;
   font-weight: 500;
+}
+.common-h3{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 160%;
 }
 .common-h5 {
   font-size: 18px;
@@ -82,8 +96,12 @@ img {
   .container {
     max-width: 94%;
   }
+   .common-h3{
+    font-size: 28px;
+  }
   .common-pera {
     font-size: 16px;
+    line-height: 190%;
   }
 }
 
@@ -337,6 +355,12 @@ Main
 .main-btn-wrap .find-now a {
   color: white;
 }
+.main-btn-wrap .find-now:hover {
+  background-color: white;
+}
+.main-btn-wrap .find-now:hover a{
+  color: black;
+}
 
 @media only screen and (min-width: 768px) {
   #main {
@@ -377,24 +401,26 @@ Latest Offer
 ==============
 */
 #latest-offer {
-  padding: 40px 0px;
+  padding: 40px 20px;
 }
-#latest-offer .container {
+#latest-offer .offer-container {
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 20px;
+  max-width: 1160px;
 }
-#latest-offer .container .card {
+#latest-offer .offer-container .card {
   padding: 120px 20px 20px 20px;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
-#latest-offer .container .card .card-content {
+#latest-offer .offer-container .card .card-content {
   color: white;
 }
-#latest-offer .container .card:nth-child(1) {
+#latest-offer .offer-container .card:nth-child(1) {
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.26934523809523814) 0%,
@@ -402,7 +428,7 @@ Latest Offer
     ),
     url(./images/women-fashion-free-img.jpg);
 }
-#latest-offer .container .card:nth-child(2) {
+#latest-offer .offer-container .card:nth-child(2) {
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.26934523809523814) 0%,
@@ -410,7 +436,7 @@ Latest Offer
     ),
     url(./images/men-fashion-free-img.jpg);
 }
-#latest-offer .container .card:nth-child(3) {
+#latest-offer .offer-container .card:nth-child(3) {
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.26934523809523814) 0%,
@@ -419,30 +445,34 @@ Latest Offer
     url(./images/footwear-free-img.jpg);
 }
 
-#latest-offer .container .card .card-content p {
+#latest-offer .offer-container .card .card-content p {
   margin: 10px 0px 15px 0px;
 }
 
 @media only screen and (min-width: 768px) {
-  #latest-offer .container {
-    padding: 0px 20px;
+  #latest-offer{
+    padding: 100px 20px;
+  }
+  #latest-offer .offer-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 20px;
   }
-  #latest-offer .container .card {
-    padding: 200px 30px 30px 30px;
+  #latest-offer .offer-container .card {
+    height: 480px;
+    display: flex;
+    align-items: end;
+    padding: 0px 20px 20px 20px;
   }
 }
 @media only screen and (min-width: 992px) {
-  #latest-offer .container {
-    padding: 0px 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 30px;
+  #latest-offer .offer-container .card {
+    padding: 0px 30px 30px 30px;
   }
-  #latest-offer .container .card {
-    padding: 300px 40px 40px 40px;
+}
+@media only screen and (min-width: 1440px) {
+  #latest-offer .offer-container .card {
+    padding: 0px 40px 40px 40px;
   }
 }
 /* 
@@ -479,7 +509,6 @@ Special Edition
 }
 .special-edition-container p {
   margin-bottom: 20px;
-  line-height: 160%;
 }
 .special-edition-container button {
   margin-top: 25px;
@@ -507,7 +536,7 @@ Special Edition
     padding: 0px 10px;
   }
   .special-edition-container {
-    padding: 60px 50px;
+    padding: 100px;
     text-align: start;
     justify-content: start;
     background-attachment: fixed;
@@ -515,11 +544,6 @@ Special Edition
   .special-edition-container h1 {
     font-size: 42px;
     margin-bottom: 10px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .special-edition-container {
-    padding: 100px;
   }
 }
 
@@ -549,9 +573,6 @@ Our Service
 .service img {
   width: 18%;
 }
-.service p {
-  line-height: 140%;
-}
 
 @media only screen and (min-width: 768px) {
   #our-service .container {
@@ -561,9 +582,6 @@ Our Service
     column-gap: 150px;
     justify-content: space-between;
     row-gap: 30px;
-  }
-  .service p {
-    line-height: 160%;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -580,9 +598,6 @@ Our Service
   .service {
     row-gap: 20px;
   }
-  .service p {
-    line-height: 190%;
-  }
 }
 
 /* 
@@ -598,11 +613,8 @@ Discount
   text-align: center;
 }
 #discount a {
-  font-size: 20px;
-  font-weight: 600;
   text-align: center;
   color: black;
-  line-height: 160%;
 }
 #discount a:hover {
   color: #0084d6;
@@ -611,11 +623,6 @@ Discount
 @media only screen and (min-width: 768px) {
   #discount .container {
     text-align: start;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #discount a {
-    font-size: 28px;
   }
 }
 
