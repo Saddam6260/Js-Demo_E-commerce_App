@@ -47,7 +47,7 @@ let products = [
     img: "./images/Product-img/product-w-jeans1-300x300.jpg", 
     productName: "Blue Denim Shorts", 
     price: "$130"
-  }
+  },
   {
     img: "./images/Product-img/product-accessory1-300x300.jpg",
     productName: "Anchor Bracelet",
@@ -102,7 +102,7 @@ function displayLatestOffer() {
   let displayCards = offerCards.map((card) => {
     return `<div class="card">
               <div class="card-content">
-                <h3 class="common-h3">${card.header}</h5>
+                <h3 class="common-h3">${card.header}</h3>
                 <p class="common-pera">${card.description}</p>
                 <button class="btn"><a href="">SHOP NOW</a></button>
               </div>

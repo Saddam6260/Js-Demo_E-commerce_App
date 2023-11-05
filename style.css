@@ -368,10 +368,16 @@ Main
   }
   #main .main-content h1 {
     font-size: 50px;
+    display: flex;
+    flex-flow: column;
   }
   .main-btn-wrap {
     flex-flow: row;
     column-gap: 15px;
+  }
+  #main .main-content {
+    color: white;
+    text-align: start;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -385,8 +391,6 @@ Main
   }
   #main .main-content h1 {
     font-size: 65px;
-    display: flex;
-    flex-flow: column;
     margin-bottom: 30px;
   }
   #main .main-content h5 {
@@ -416,6 +420,7 @@ Latest Offer
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  flex-flow: column;
 }
 #latest-offer .offer-container .card .card-content {
   color: white;
@@ -461,7 +466,9 @@ Latest Offer
   #latest-offer .offer-container .card {
     height: 480px;
     display: flex;
-    align-items: end;
+    align-items: start;
+    flex-flow: column;
+    justify-content: end;
     padding: 0px 20px 20px 20px;
   }
 }
